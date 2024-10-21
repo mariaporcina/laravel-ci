@@ -16,4 +16,11 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function test_the_application_returns_a_four_oh_four_response(): void
+    {
+        $response = $this->get('/404');
+
+        $response->assertStatus(404);
+    }
 }
